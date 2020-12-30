@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <div>
-            <h1>Products</h1>
-        </div>
-    </head>
-    <body>
-        <h3>Home</h3>
-        {% for product in products%}
-            <h3>{{product.productname}} :</h3>
-            <p>
-                {{product.price}}
-            </p>
-        {% endfor %}
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Home</h3>
+    {% for product in products%}
+        <h3>{{product.productname}} :</h3>
+        <p>
+            {{product.price}}
+        </p>
+    {% endfor %}
+{% endblock content %}  

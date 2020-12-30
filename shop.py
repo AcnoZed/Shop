@@ -15,11 +15,11 @@ products = [
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', products = products)
+    return render_template('home.html', products = products, title= 'Home')
 
 @app.route("/about")
 def about():
-    return "<h4>About Page</h4>"
+    return render_template('about.html', title='About')
 
 ##if __name__ == '__main__':
 ##    app.run(debug=True)
