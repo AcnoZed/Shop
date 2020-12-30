@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+            {% if title%}
+                <title>Shop - {{title}}</title>
+                <h1>Shop - {{title}}</h1>
+            {% else %}
+                <title>Shop</title>
+                <h1>Shop</h1>
+            {% endif %}
+        </div>
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
