@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden.tag() }}
+        <fieldset class="form-group">
+            <legend>Login</legend>
+            <div class="form-group">
+                {{form.email}}
+            </div>
+        </fieldset>
+    </form>
+    <span class="border border-dark"></span>
+</div>
+
+{% endblock content %}
