@@ -42,6 +42,18 @@
         <main role="main" class="container">
           <div class="row mt-md-n5" style="margin-top: 10px;">
             <div class="col-md-8">
+              {% with messages = get_flashed_messages(with_categories=true)%}
+                {% if messages %}
+                  {% for category, message in messages %}
+                    <div class="alert alert-dark" role="alert">
+                      {{message}}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                  {% endfor %}
+                {% endif%}
+              {% endwith %}
               {% block content %}{% endblock %}
             </div>
             <div class="col-md-4">
